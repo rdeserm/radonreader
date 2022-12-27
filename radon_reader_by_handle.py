@@ -37,6 +37,9 @@ def radon_device_finder():
 			if 'FR:RU' in name:
 				logger.info('Found RD200 - x>=2022 revision with address: ' + device.addr)
 				return device.addr, 1
+			elif 'FR:GJ' in name:
+				logger.info('Found RD200 - x>=2022 revision with address: ' + device.addr)
+				return device.addr, 1
 			elif 'FR:R2' in name:
 				logger.info('Found RD200 - x<2002 revision with address: ' + device.addr)
 				return device.addr, 0
